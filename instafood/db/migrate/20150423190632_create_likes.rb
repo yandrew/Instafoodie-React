@@ -1,8 +1,8 @@
 class CreateLikes < ActiveRecord::Migration
   def change
     create_table :likes do |t|
-      t.references :users
-      t.references :likes
+      t.references :user
+      t.references :like
 
       t.timestamps null: false
     end
